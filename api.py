@@ -10,7 +10,8 @@ import numpy as np
 
 app = FastAPI()
 origins = [
-    "https://unruffled-elion-7e9bda.netlify.app/"
+    "https://unruffled-elion-7e9bda.netlify.app/",
+    "*"
 ]
 
 app.add_middleware(
