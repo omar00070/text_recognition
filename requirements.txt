@@ -34,7 +34,6 @@ google-resumable-media==0.5.0
 googleapis-common-protos==1.51.0
 gprof2dot==2019.11.30
 gunicorn==20.1.0
--e git+git@gitlab.com:hades-ai/frontend.git@90bbb51f57856a2e885d2948bd649006f39ef232#egg=hades_schemas&subdirectory=schemas
 hades-utils==0.1
 httplib2==0.17.0
 idna==2.8
