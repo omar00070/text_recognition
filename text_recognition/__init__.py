@@ -1,0 +1,1 @@
+from .tesseract import get_string
