@@ -60,10 +60,10 @@ if __name__ == "__main__":
 # ==================== app
 app = FastAPI()
 origins = [
-    "https://unruffled-elion-7e9bda.netlify.app/",
-    "http://localhost:3000",
-    "http://127.0.0.1:3000"
-    # "*"
+    # "https://unruffled-elion-7e9bda.netlify.app/",
+    # "http://localhost:3000",
+    # "http://127.0.0.1:3000"
+    "*"
 ]
 
 app.add_middleware(
@@ -73,17 +73,12 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-@app.get("/")
+@app.get("/api/")
 async def root():
     return {"message": "Hello World"}
 
 
-@app.post("/")
-async def get_text(item):
-    return {"message": "received" }
-
-
-@app.post("/uploadfile/")
+@app.post("/api/uploadfile/")
 async def create_upload_file(file: UploadFile = File(...)):
     img = file.file.read()
     x = np.fromstring(img, dtype='uint8')
